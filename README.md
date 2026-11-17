@@ -5,3 +5,4 @@ Satu proyek mini baru setiap hari.
 | Tanggal | Proyek | Deskripsi |
 |---|---|---|
 | 2026-11-16 | [kalkulator-bangun-datar](2026-11-16-kalkulator-bangun-datar) | Menghitung keliling dan luas 8 bangun datar dengan Python. |
+| 2026-11-17 | [kalkulator-posisi-futures](2026-11-17-kalkulator-posisi-futures) | Menghitung ukuran posisi, risk-reward, dan leverage aman untuk futures (alat hitung saja). |
