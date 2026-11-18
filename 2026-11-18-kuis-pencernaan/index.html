@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Kuis Sistem Pencernaan</title>
+<style>
+  body{font-family:system-ui,sans-serif;max-width:640px;margin:2rem auto;padding:0 1rem;background:#f6faf5;color:#222}
+  h1{font-size:1.5rem}
+  .kartu{background:#fff;border-radius:12px;padding:1.2rem;box-shadow:0 1px 4px #0002}
+  button{display:block;width:100%;text-align:left;margin:.4rem 0;padding:.7rem;border:2px solid #cfd8cc;border-radius:8px;background:#fff;font-size:1rem;cursor:pointer}
+  button:hover:not(:disabled){border-color:#4a9b5f}
+  button.benar{background:#d6f3dc;border-color:#2e8b47}
+  button.salah{background:#fadadd;border-color:#c0392b}
+  #lanjut{background:#2e8b47;color:#fff;text-align:center;border:0;margin-top:1rem}
+  #info{margin-top:.8rem;font-size:.95rem}
+  .bar{height:8px;background:#dde;border-radius:4px;margin-bottom:1rem}
+  .bar div{height:100%;background:#2e8b47;border-radius:4px;transition:width .3s}
+</style>
+</head>
+<body>
+<h1>🍽️ Kuis Sistem Pencernaan</h1>
+<div class="kartu" id="app"></div>
+<script>
+// Bank soal: pertanyaan, pilihan, indeks jawaban benar, penjelasan
+const SOAL = [
+  {t:"Pencernaan kimiawi karbohidrat dimulai di ...", p:["Lambung","Mulut","Usus halus","Kerongkongan"], j:1, e:"Enzim amilase pada air liur mulai memecah amilum menjadi gula sederhana."},
+  {t:"Saluran yang menghubungkan mulut dengan lambung adalah ...", p:["Faring","Trakea","Kerongkongan (esofagus)","Usus besar"], j:2, e:"Makanan didorong oleh gerak peristaltik di kerongkongan."},
+  {t:"Enzim pepsin bekerja memecah ...", p:["Protein","Lemak","Karbohidrat","Vitamin"], j:0, e:"Pepsin di lambung memecah protein menjadi molekul yang lebih kecil."},
+  {t:"Penyerapan sari makanan terutama terjadi di ...", p:["Lambung","Usus besar","Usus halus","Kerongkongan"], j:2, e:"Dinding usus halus punya vili yang memperluas bidang penyerapan."},
+  {t:"Organ yang menghasilkan empedu adalah ...", p:["Pankreas","Hati","Kantung empedu","Lambung"], j:1, e:"Hati membuat empedu; kantung empedu hanya menyimpannya."},
+  {t:"Fungsi utama usus besar adalah ...", p:["Menyerap air dan membentuk feses","Memecah protein","Menghasilkan empedu","Mengunyah makanan"], j:0, e:"Usus besar menyerap air dari sisa makanan dan membentuk feses."},
+  {t:"Gerakan otot yang mendorong makanan sepanjang saluran pencernaan disebut ...", p:["Refleks","Peristaltik","Osmosis","Difusi"], j:1, e:"Peristaltik adalah gerakan kontraksi bergelombang otot polos."},
+  {t:"Cairan pankreas mengandung enzim yang memecah ...", p:["Hanya protein","Hanya vitamin","Karbohidrat, protein, dan lemak","Hanya mineral"], j:2, e:"Pankreas menghasilkan amilase, tripsin, dan lipase ke usus halus."},
+  {t:"Gigi yang berfungsi mengoyak makanan adalah ...", p:["Seri (insisivus)","Taring (kaninus)","Geraham (molar)","Semua salah"], j:1, e:"Gigi taring runcing untuk mengoyak; seri memotong; geraham menggiling."},
+  {t:"Katup yang mencegah makanan masuk ke saluran napas saat menelan adalah ...", p:["Epiglotis","Pilorus","Sfingter anus","Uvula"], j:0, e:"Epiglotis menutup pangkal tenggorokan saat menelan."}
+];
+
+function acak(a){a=a.slice();for(let i=a.length-1;i>0;i--){const k=Math.floor(Math.random()*(i+1));[a[i],a[k]]=[a[k],a[i]]}return a}
+
+const app = document.getElementById("app");
+let daftar, no, skor;
+
+function mulai(){ daftar = acak(SOAL); no = 0; skor = 0; tampil(); }
+
+function tampil(){
+  if(no >= daftar.length) return hasil();
+  const s = daftar[no];
+  // acak urutan pilihan sambil melacak jawaban benar
+  const pil = acak(s.p.map((teks,i)=>({teks,benar:i===s.j})));
+  app.innerHTML = `<div class="bar"><div style="width:${no/daftar.length*100}%"></div></div>
+    <p>Soal ${no+1} dari ${daftar.length}</p><h3>${s.t}</h3><div id="pilihan"></div><div id="info"></div>`;
+  const box = document.getElementById("pilihan");
+  pil.forEach(p=>{
+    const b = document.createElement("button");
+    b.textContent = p.teks;
+    b.onclick = ()=>jawab(b, p.benar, box, s);
+    box.appendChild(b);
+  });
+}
+
+function jawab(btn, benar, box, s){
+  [...box.children].forEach(x=>x.disabled=true);
+  if(benar){ btn.classList.add("benar"); skor++; }
+  else{
+    btn.classList.add("salah");
+    [...box.children].find(x=>x.textContent===s.p[s.j]).classList.add("benar");
+  }
+  document.getElementById("info").textContent = (benar?"Benar! ":"Kurang tepat. ") + s.e;
+  const l = document.createElement("button");
+  l.id="lanjut"; l.textContent = no+1<daftar.length ? "Soal berikutnya →" : "Lihat hasil";
+  l.onclick = ()=>{no++; tampil();};
+  app.appendChild(l);
+}
+
+function hasil(){
+  const nilai = Math.round(skor/daftar.length*100);
+  const pesan = nilai>=80 ? "Hebat! Pemahamanmu sangat baik." : nilai>=60 ? "Cukup baik, ulangi sedikit materi." : "Ayo belajar lagi, kamu pasti bisa!";
+  app.innerHTML = `<h2>Hasil: ${skor}/${daftar.length} (${nilai})</h2><p>${pesan}</p>`;
+  const b = document.createElement("button");
+  b.id="lanjut"; b.textContent="Main lagi"; b.onclick=mulai; app.appendChild(b);
+}
+mulai();
+</script>
+</body>
+</html>
