@@ -1,0 +1,11 @@
+# Format: indonesia = inggris
+sekolah = school
+guru = teacher
+murid = student
+buku = book
+pensil = pencil
+papan tulis = whiteboard
+belajar = to learn
+mengajar = to teach
+kelas = classroom
+pekerjaan rumah = homework

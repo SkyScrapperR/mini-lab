@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="id"><head><meta charset="utf-8"><title>Flashcard</title>
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<style>
+body{font-family:sans-serif;background:#f4f1ea;margin:0;padding:1rem}
+h1{text-align:center}
+.grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(160px,1fr));gap:12px}
+.kartu{position:relative;height:100px;cursor:pointer;perspective:600px}
+.muka{position:absolute;inset:0;display:flex;align-items:center;justify-content:center;
+border-radius:10px;font-size:1.1rem;text-align:center;padding:6px;backface-visibility:hidden;
+transition:transform .4s;box-shadow:0 1px 4px #0003}
+.depan{background:#fff}.belakang{background:#2f6f5e;color:#fff;transform:rotateY(180deg)}
+.kartu.balik .depan{transform:rotateY(180deg)}.kartu.balik .belakang{transform:rotateY(360deg)}
+</style></head><body><h1>Flashcard (10 kartu)</h1>
+<p style="text-align:center">Klik kartu untuk membaliknya.</p>
+<div class="grid">
+<div class="kartu" onclick="this.classList.toggle('balik')"><div class="muka depan">murid</div><div class="muka belakang">student</div></div>
+<div class="kartu" onclick="this.classList.toggle('balik')"><div class="muka depan">pensil</div><div class="muka belakang">pencil</div></div>
+<div class="kartu" onclick="this.classList.toggle('balik')"><div class="muka depan">kelas</div><div class="muka belakang">classroom</div></div>
+<div class="kartu" onclick="this.classList.toggle('balik')"><div class="muka depan">sekolah</div><div class="muka belakang">school</div></div>
+<div class="kartu" onclick="this.classList.toggle('balik')"><div class="muka depan">buku</div><div class="muka belakang">book</div></div>
+<div class="kartu" onclick="this.classList.toggle('balik')"><div class="muka depan">mengajar</div><div class="muka belakang">to teach</div></div>
+<div class="kartu" onclick="this.classList.toggle('balik')"><div class="muka depan">pekerjaan rumah</div><div class="muka belakang">homework</div></div>
+<div class="kartu" onclick="this.classList.toggle('balik')"><div class="muka depan">guru</div><div class="muka belakang">teacher</div></div>
+<div class="kartu" onclick="this.classList.toggle('balik')"><div class="muka depan">papan tulis</div><div class="muka belakang">whiteboard</div></div>
+<div class="kartu" onclick="this.classList.toggle('balik')"><div class="muka depan">belajar</div><div class="muka belakang">to learn</div></div>
+</div></body></html>
