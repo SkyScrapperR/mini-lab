@@ -1,0 +1,28 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="800" height="670" viewBox="0 0 800 670" font-family="Arial, sans-serif">
+<rect width="100%" height="100%" fill="#fdf6ec"/>
+<rect width="800" height="90" fill="#264653"/>
+<text x="400.0" y="57" font-size="32" font-weight="bold" fill="#fff" text-anchor="middle">Siklus Air</text>
+<rect x="40" y="120" width="720" height="110" rx="14" fill="#fff" stroke="#e76f51" stroke-width="3"/>
+<circle cx="95" cy="175.0" r="30" fill="#e76f51"/>
+<text x="95" y="185.0" font-size="28" font-weight="bold" fill="#fff" text-anchor="middle">1</text>
+<text x="150" y="155" font-size="22" font-weight="bold" fill="#e76f51">Penguapan</text>
+<text x="150" y="182" font-size="16" fill="#333">Panas matahari mengubah air laut dan sungai menjadi uap air.</text>
+<polygon points="390.0,233 410.0,233 400.0,247" fill="#999"/>
+<rect x="40" y="250" width="720" height="110" rx="14" fill="#fff" stroke="#f4a261" stroke-width="3"/>
+<circle cx="95" cy="305.0" r="30" fill="#f4a261"/>
+<text x="95" y="315.0" font-size="28" font-weight="bold" fill="#fff" text-anchor="middle">2</text>
+<text x="150" y="285" font-size="22" font-weight="bold" fill="#f4a261">Kondensasi</text>
+<text x="150" y="312" font-size="16" fill="#333">Uap air naik, mendingin, lalu membentuk awan.</text>
+<polygon points="390.0,363 410.0,363 400.0,377" fill="#999"/>
+<rect x="40" y="380" width="720" height="110" rx="14" fill="#fff" stroke="#2a9d8f" stroke-width="3"/>
+<circle cx="95" cy="435.0" r="30" fill="#2a9d8f"/>
+<text x="95" y="445.0" font-size="28" font-weight="bold" fill="#fff" text-anchor="middle">3</text>
+<text x="150" y="415" font-size="22" font-weight="bold" fill="#2a9d8f">Presipitasi</text>
+<text x="150" y="442" font-size="16" fill="#333">Awan menjadi berat dan menurunkan hujan ke bumi.</text>
+<polygon points="390.0,493 410.0,493 400.0,507" fill="#999"/>
+<rect x="40" y="510" width="720" height="110" rx="14" fill="#fff" stroke="#457b9d" stroke-width="3"/>
+<circle cx="95" cy="565.0" r="30" fill="#457b9d"/>
+<text x="95" y="575.0" font-size="28" font-weight="bold" fill="#fff" text-anchor="middle">4</text>
+<text x="150" y="545" font-size="22" font-weight="bold" fill="#457b9d">Infiltrasi</text>
+<text x="150" y="572" font-size="16" fill="#333">Air hujan meresap ke tanah dan menjadi air tanah.</text>
+</svg>
