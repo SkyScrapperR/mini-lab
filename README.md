@@ -11,3 +11,4 @@ Satu proyek mini baru setiap hari.
 | 2026-11-20 | [pemantau-harga-kripto](2026-11-20-pemantau-harga-kripto) | Mencatat harga kripto dari API publik ke CSV, aman saat jaringan mati. |
 | 2026-11-21 | [pembuat-flashcard](2026-11-21-pembuat-flashcard) | Membuat flashcard HTML dan CSV dari file teks kosakata Indonesia-Inggris. |
 | 2026-11-22 | [teks-ke-infografis](2026-11-22-teks-ke-infografis) | Mengubah teks ringkas menjadi infografis SVG bernomor. |
+| 2026-11-23 | [latihan-pecahan](2026-11-23-latihan-pecahan) | Generator soal pecahan SD (tambah, kurang, kali) dengan penilaian otomatis. |
