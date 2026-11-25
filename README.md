@@ -13,3 +13,4 @@ Satu proyek mini baru setiap hari.
 | 2026-11-22 | [teks-ke-infografis](2026-11-22-teks-ke-infografis) | Mengubah teks ringkas menjadi infografis SVG bernomor. |
 | 2026-11-23 | [latihan-pecahan](2026-11-23-latihan-pecahan) | Generator soal pecahan SD (tambah, kurang, kali) dengan penilaian otomatis. |
 | 2026-11-24 | [statistik-teks](2026-11-24-statistik-teks) | Menghitung kata, kalimat, paragraf, dan kata tersering dari sebuah teks. |
+| 2026-11-25 | [simulasi-dadu](2026-11-25-simulasi-dadu) | Simulasi lemparan dadu dan perbandingan peluang empiris dengan peluang teori. |
