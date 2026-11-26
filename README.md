@@ -14,3 +14,4 @@ Satu proyek mini baru setiap hari.
 | 2026-11-23 | [latihan-pecahan](2026-11-23-latihan-pecahan) | Generator soal pecahan SD (tambah, kurang, kali) dengan penilaian otomatis. |
 | 2026-11-24 | [statistik-teks](2026-11-24-statistik-teks) | Menghitung kata, kalimat, paragraf, dan kata tersering dari sebuah teks. |
 | 2026-11-25 | [simulasi-dadu](2026-11-25-simulasi-dadu) | Simulasi lemparan dadu dan perbandingan peluang empiris dengan peluang teori. |
+| 2026-11-26 | [konverter-satuan](2026-11-26-konverter-satuan) | Mengubah satuan panjang, berat, dan waktu lewat baris perintah untuk latihan matematika SD. |
