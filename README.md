@@ -15,3 +15,4 @@ Satu proyek mini baru setiap hari.
 | 2026-11-24 | [statistik-teks](2026-11-24-statistik-teks) | Menghitung kata, kalimat, paragraf, dan kata tersering dari sebuah teks. |
 | 2026-11-25 | [simulasi-dadu](2026-11-25-simulasi-dadu) | Simulasi lemparan dadu dan perbandingan peluang empiris dengan peluang teori. |
 | 2026-11-26 | [konverter-satuan](2026-11-26-konverter-satuan) | Mengubah satuan panjang, berat, dan waktu lewat baris perintah untuk latihan matematika SD. |
+| 2026-11-27 | [fpb-kpk](2026-11-27-fpb-kpk) | Menghitung FPB dan KPK beserta langkah faktorisasi prima untuk belajar matematika SD. |
