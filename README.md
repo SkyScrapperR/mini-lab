@@ -16,3 +16,4 @@ Satu proyek mini baru setiap hari.
 | 2026-11-25 | [simulasi-dadu](2026-11-25-simulasi-dadu) | Simulasi lemparan dadu dan perbandingan peluang empiris dengan peluang teori. |
 | 2026-11-26 | [konverter-satuan](2026-11-26-konverter-satuan) | Mengubah satuan panjang, berat, dan waktu lewat baris perintah untuk latihan matematika SD. |
 | 2026-11-27 | [fpb-kpk](2026-11-27-fpb-kpk) | Menghitung FPB dan KPK beserta langkah faktorisasi prima untuk belajar matematika SD. |
+| 2026-11-28 | [angka-romawi](2026-11-28-angka-romawi) | Mengubah bilangan biasa ke angka Romawi dan sebaliknya, lengkap dengan validasi penulisan baku. |
